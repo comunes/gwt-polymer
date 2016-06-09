@@ -51,7 +51,7 @@ public class App implements EntryPoint {
     ok.setText("Done");
     dialog.addActionButtons(dismissive, 0, ok);
 
-    final PaperToast toast = new PaperToast();
+    final PaperToast toast = PaperToast.wrap("toast");
 
     final PaperIconButton paperBtn = new PaperIconButton();
     paperBtn.setText("Icon btn");
