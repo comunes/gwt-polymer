@@ -1,12 +1,12 @@
 package br.com.rpa.client._paperelements;
 
-import br.com.rpa.client._coreelements.CoreRangeElement;
-
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.TagName;
 
+import br.com.rpa.client._ironelements.IronRangeBehaviorElement;
+
 @TagName(PaperProgressElement.TAG)
-public class PaperProgressElement extends CoreRangeElement {
+public class PaperProgressElement extends IronRangeBehaviorElement {
 
   public static final String TAG = "paper-progress";
 

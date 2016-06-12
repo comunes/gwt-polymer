@@ -1,19 +1,19 @@
-package br.com.rpa.client.api.widgets.core;
-
-import br.com.rpa.client.api.elements.core.CoreInputElement;
+package br.com.rpa.client.api.widgets.iron;
 
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.TextBoxBase;
 
-public class CoreInput extends TextBoxBase {
+import br.com.rpa.client.api.elements.iron.IronInputElement;
+
+public class IronInput extends TextBoxBase {
 	private boolean valueChangeHandlerInitialized = false;
 
-	public CoreInput() {
-		this(Document.get().createElement(CoreInputElement.TAG));
+	public IronInput() {
+		this(Document.get().createElement(IronInputElement.TAG));
 	}
 
-	protected CoreInput(Element elem) {
+	protected IronInput(Element elem) {
 		super(elem);
 	}
 
@@ -135,7 +135,7 @@ public class CoreInput extends TextBoxBase {
 		getCoreElement().setAutoFocus(autoFocus);
 	}
 
-	private CoreInputElement getCoreElement() {
+	private IronInputElement getCoreElement() {
 		Element elem = super.getElement();
 		return elem.cast();
 	}

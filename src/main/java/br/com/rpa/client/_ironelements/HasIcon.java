@@ -21,7 +21,7 @@
  *
  */
 
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 public interface HasIcon {
   String getIcon();

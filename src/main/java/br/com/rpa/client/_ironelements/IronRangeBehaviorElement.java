@@ -1,22 +1,22 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.TagName;
 
-@TagName(CoreRangeElement.TAG)
-public class CoreRangeElement extends Element {
-  public static final String TAG = "core-range";
+@TagName(IronRangeBehaviorElement.TAG)
+public class IronRangeBehaviorElement extends Element {
+  public static final String TAG = "iron-range-behavior";
 
   /**
    * Assert that the given {@link Element} is compatible with this class and
    * automatically typecast it.
    */
-  public static CoreRangeElement as(final Element elem) {
+  public static IronRangeBehaviorElement as(final Element elem) {
     assert elem.getTagName().equalsIgnoreCase(TAG);
-    return (CoreRangeElement) elem;
+    return (IronRangeBehaviorElement) elem;
   }
 
-  protected CoreRangeElement() {
+  protected IronRangeBehaviorElement() {
   }
 
   public final native int getMax() /*-{

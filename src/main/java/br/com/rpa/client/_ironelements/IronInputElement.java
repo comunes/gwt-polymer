@@ -1,23 +1,23 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.TagName;
 
-@TagName(CoreInputElement.TAG)
-public class CoreInputElement extends Element {
+@TagName(IronInputElement.TAG)
+public class IronInputElement extends Element {
 
-	public static final String TAG = "core-input";
+	public static final String TAG = "iron-input";
 
 	/**
 	 * Assert that the given {@link Element} is compatible with this class and
 	 * automatically typecast it.
 	 */
-	public static CoreInputElement as(Element elem) {
+	public static IronInputElement as(Element elem) {
 		assert elem.getTagName().equalsIgnoreCase(TAG);
-		return (CoreInputElement) elem;
+		return (IronInputElement) elem;
 	}
 
-	protected CoreInputElement() {}
+	protected IronInputElement() {}
 
 	public final native void commit() /*-{
 		return this.commit();

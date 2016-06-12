@@ -1,7 +1,13 @@
 package br.com.rpa.client;
 
-import br.com.rpa.client._coreelements.CoreIcon;
-import br.com.rpa.client._coreelements.CoreIconButton;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.RootPanel;
+
+import br.com.rpa.client._ironelements.IronIcon;
 import br.com.rpa.client._paperelements.PaperButton;
 import br.com.rpa.client._paperelements.PaperCheckBox;
 import br.com.rpa.client._paperelements.PaperCustomButton;
@@ -11,13 +17,6 @@ import br.com.rpa.client._paperelements.PaperIconButton;
 import br.com.rpa.client._paperelements.PaperInput;
 import br.com.rpa.client._paperelements.PaperToast;
 import br.com.rpa.client.ui.PolymerTest;
-
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.ui.Image;
-import com.google.gwt.user.client.ui.RootPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -33,10 +32,10 @@ public class App implements EntryPoint {
     button.setText("Paper button");
     button.setRaisedButton(true);
     assert button.getText().equals("Paper button");
-    final CoreIconButton coreIconBtn = new CoreIconButton();
-    coreIconBtn.setText("CoreIconBtn");
-    coreIconBtn.setIcon("close");
-    assert coreIconBtn.getText().equals("CoreIconBtn");
+    final PaperIconButton paperIconBtn = new PaperIconButton();
+    paperIconBtn.setText("PaperIconBtn");
+    paperIconBtn.setIcon("close");
+    // assert paperIconBtn.getText().equals("PaperIconBtn");
 
     final PaperDialog dialog = new PaperDialog();
     dialog.setOpened(true);
@@ -84,17 +83,18 @@ public class App implements EntryPoint {
       }
     });
 
-    final CoreIconButton coreIconBtn2 = new CoreIconButton();
-    coreIconBtn2.setIcon("folder");
-    coreIconBtn2.setText("somelabel");
-    assert coreIconBtn2.getText().equals("somelabel");
-    final CoreIcon coreIcon = new CoreIcon();
+    final PaperIconButton paperIconBtn2 = new PaperIconButton();
+    paperIconBtn2.setIcon("folder");
+    paperIconBtn2.setText("somelabel");
+    // assert paperIconBtn2.getText().equals("somelabel");
+    final IronIcon coreIcon = new IronIcon();
     coreIcon.setIcon("polymer");
 
-    final CoreIcon coreIconForCustom = new CoreIcon();
+    final IronIcon coreIconForCustom = new IronIcon();
     coreIconForCustom.setIcon("explore");
 
-    final PaperCustomButton<CoreIcon> customPaperBtn = new PaperCustomButton<CoreIcon>(coreIconForCustom);
+    final PaperCustomButton<IronIcon> customPaperBtn = new PaperCustomButton<IronIcon>(
+        coreIconForCustom);
     customPaperBtn.setText("Custom");
     customPaperBtn.addClickHandler(new ClickHandler() {
       @Override
@@ -105,14 +105,14 @@ public class App implements EntryPoint {
     });
 
     RootPanel.get().add(button);
-    RootPanel.get().add(coreIconBtn);
+    RootPanel.get().add(paperIconBtn);
     RootPanel.get().add(checkbox);
     RootPanel.get().add(dialog);
     RootPanel.get().add(paperBtn);
     RootPanel.get().add(input);
     RootPanel.get().add(fab);
     RootPanel.get().add(fabmini);
-    RootPanel.get().add(coreIconBtn2);
+    RootPanel.get().add(paperIconBtn2);
     RootPanel.get().add(coreIcon);
     RootPanel.get().add(customPaperBtn);
     RootPanel.get().add(toast);

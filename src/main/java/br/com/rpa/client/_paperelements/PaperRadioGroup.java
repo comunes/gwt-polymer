@@ -2,9 +2,6 @@ package br.com.rpa.client._paperelements;
 
 import java.util.Collection;
 
-import br.com.rpa.client._coreelements.CoreSelector;
-import br.com.rpa.client._coreelements.CoreSelectorItemRenderer;
-
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
@@ -15,10 +12,13 @@ import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.view.client.ProvidesKey;
 import com.google.gwt.view.client.SimpleKeyProvider;
 
-public class PaperRadioGroup<T> extends CoreSelector<T> {
+import br.com.rpa.client._ironelements.IronSelector;
+import br.com.rpa.client._ironelements.IronSelectorItemRenderer;
+
+public class PaperRadioGroup<T> extends IronSelector<T> {
 
 	public PaperRadioGroup() {
-		this(new CoreSelectorItemRenderer<T>() {
+		this(new IronSelectorItemRenderer<T>() {
 			@Override
 			public Element render(T item) {
 				final PaperRadioButton opt = new PaperRadioButton();
@@ -30,7 +30,7 @@ public class PaperRadioGroup<T> extends CoreSelector<T> {
 		}, new SimpleKeyProvider<T>());
 	}
 
-	public PaperRadioGroup(CoreSelectorItemRenderer<T> itemRenderer,
+	public PaperRadioGroup(IronSelectorItemRenderer<T> itemRenderer,
 			ProvidesKey<T> keyProvider){
 		super(Document.get().createElement(PaperRadioGroupElement.TAG), itemRenderer, keyProvider);
 	}

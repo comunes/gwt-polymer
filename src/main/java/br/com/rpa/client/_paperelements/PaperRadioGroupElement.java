@@ -1,12 +1,12 @@
 package br.com.rpa.client._paperelements;
 
-import br.com.rpa.client._coreelements.CoreSelectorElement;
-
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.TagName;
 
+import br.com.rpa.client._ironelements.IronSelectorElement;
+
 @TagName(PaperRadioGroupElement.TAG)
-public class PaperRadioGroupElement extends CoreSelectorElement {
+public class PaperRadioGroupElement extends IronSelectorElement {
 
 	public static final String TAG = "paper-radio-group";
 

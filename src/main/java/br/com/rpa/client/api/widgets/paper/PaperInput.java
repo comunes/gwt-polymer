@@ -1,12 +1,12 @@
 package br.com.rpa.client.api.widgets.paper;
 
 import br.com.rpa.client.api.elements.paper.PaperInputElement;
-import br.com.rpa.client.api.widgets.core.CoreInput;
+import br.com.rpa.client.api.widgets.iron.IronInput;
 
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 
-public class PaperInput extends CoreInput {
+public class PaperInput extends IronInput {
 
 	public PaperInput() {
 		this(Document.get().createElement(PaperInputElement.TAG));

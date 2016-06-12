@@ -1,23 +1,23 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.TextBoxBase;
 
-public class CoreInput extends TextBoxBase {
+public class IronInput extends TextBoxBase {
 
 	public static final String STYLE = "";
 
-	protected CoreInput(Element elem){
+	protected IronInput(Element elem){
 		super(elem);
 	}
 
-	public CoreInput() {
-		this(Document.get().createElement(CoreInputElement.TAG), STYLE);
+	public IronInput() {
+		this(Document.get().createElement(IronInputElement.TAG), STYLE);
 	}
 
-	public CoreInput(Element element, String styleName) {
+	public IronInput(Element element, String styleName) {
 		this(element);
 		if (styleName != null && !styleName.equalsIgnoreCase(STYLE)) {
 			styleName = STYLE + " " + styleName;
@@ -116,7 +116,7 @@ public class CoreInput extends TextBoxBase {
 		getPaperElement().setInvalid(status);
 	}
 
-	private CoreInputElement getPaperElement() {
+	private IronInputElement getPaperElement() {
 		return getElement().cast();
 	}
 

@@ -1,12 +1,12 @@
 package br.com.rpa.client.api.elements.paper;
 
-import br.com.rpa.client.api.elements.core.CoreInputElement;
-
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.TagName;
 
+import br.com.rpa.client.api.elements.iron.IronInputElement;
+
 @TagName(PaperInputElement.TAG)
-public class PaperInputElement extends CoreInputElement {
+public class PaperInputElement extends IronInputElement {
 
 	public static final String TAG = "paper-input";
 

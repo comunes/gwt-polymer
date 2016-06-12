@@ -1,11 +1,11 @@
 package br.com.rpa.client._paperelements;
 
-import br.com.rpa.client._coreelements.CoreInput;
-
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 
-public class PaperInput extends CoreInput {
+import br.com.rpa.client._ironelements.IronInput;
+
+public class PaperInput extends IronInput {
 
 	public static final String STYLE = "";
 

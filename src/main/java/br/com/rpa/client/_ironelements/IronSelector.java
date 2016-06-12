@@ -1,4 +1,4 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,11 +21,11 @@ import com.google.gwt.user.client.ui.HasConstrainedValue;
 import com.google.gwt.view.client.ProvidesKey;
 import com.google.gwt.view.client.SimpleKeyProvider;
 
-public class CoreSelector<T> extends FocusWidget implements
+public class IronSelector<T> extends FocusWidget implements
 HasConstrainedValue<T> {
 
 	protected ProvidesKey<T> keyProvider;
-	protected CoreSelectorItemRenderer<T> renderer;
+	protected IronSelectorItemRenderer<T> renderer;
 
 	protected List<T> values = new ArrayList<T>();
 	protected Map<Object, Integer> valueKeyToIndex = new HashMap<Object, Integer>();
@@ -34,8 +34,8 @@ HasConstrainedValue<T> {
 
 	private boolean valueChangeHandlerInitialized;
 
-	public CoreSelector() {
-		this(new CoreSelectorItemRenderer<T>() {
+	public IronSelector() {
+		this(new IronSelectorItemRenderer<T>() {
 			@Override
 			public Element render(T item) {
 				Element el = DOM.createDiv();
@@ -47,12 +47,12 @@ HasConstrainedValue<T> {
 		}, new SimpleKeyProvider<T>());
 	}
 
-	public CoreSelector(CoreSelectorItemRenderer<T> renderer,
+	public IronSelector(IronSelectorItemRenderer<T> renderer,
 			ProvidesKey<T> keyProvider) {
-		this( Document.get().createElement(CoreSelectorElement.TAG), renderer, keyProvider );
+		this( Document.get().createElement(IronSelectorElement.TAG), renderer, keyProvider );
 	}
 
-	public CoreSelector(Element elem, CoreSelectorItemRenderer<T> renderer,
+	public IronSelector(Element elem, IronSelectorItemRenderer<T> renderer,
 			ProvidesKey<T> keyProvider) {
 		super(elem);
 		this.keyProvider = keyProvider;
@@ -63,7 +63,7 @@ HasConstrainedValue<T> {
 		addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
-				ValueChangeEvent.fire(CoreSelector.this, getValue());
+				ValueChangeEvent.fire(IronSelector.this, getValue());
 			}
 		});
 	}
@@ -207,7 +207,7 @@ HasConstrainedValue<T> {
 		updateSelection();
 	}
 
-	protected CoreSelectorElement getPaperElement() {
+	protected IronSelectorElement getPaperElement() {
 		return getElement().cast();
 	}
 

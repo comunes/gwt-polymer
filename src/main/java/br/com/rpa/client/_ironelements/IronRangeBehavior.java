@@ -1,16 +1,16 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.FocusWidget;
 
-public class CoreRange extends FocusWidget {
+public class IronRangeBehavior extends FocusWidget {
 
-  public CoreRange() {
-    this(Document.get().createElement(CoreRangeElement.TAG));
+  public IronRangeBehavior() {
+    this(Document.get().createElement(IronRangeBehaviorElement.TAG));
   }
 
-  public CoreRange(final Element element) {
+  public IronRangeBehavior(final Element element) {
     super(element);
   }
 
@@ -22,7 +22,7 @@ public class CoreRange extends FocusWidget {
     return getPaperElement().getMin();
   }
 
-  private CoreRangeElement getPaperElement() {
+  private IronRangeBehaviorElement getPaperElement() {
     return getElement().cast();
   }
 

@@ -45,10 +45,6 @@ public class PaperToast extends FocusWidget {
     }
   }
 
-  public void dismiss() {
-    getPaperElement().dismiss();
-  }
-
   public int getDuration() {
     return getPaperElement().getDuration();
   }
@@ -63,6 +59,10 @@ public class PaperToast extends FocusWidget {
 
   public String getText() {
     return getPaperElement().getText();
+  }
+
+  public void hide() {
+    getPaperElement().hide();
   }
 
   public boolean isAutoCloseDisabled() {

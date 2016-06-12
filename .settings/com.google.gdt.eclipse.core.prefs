@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
-lastWarOutDir=/target/gwt-polymer-0.0.1-SNAPSHOT
+jarsExcludedFromWebInfLib=
+lastWarOutDir=/home/vjrj/proyectos/sync/polymer/gwt-polymer/src/main/webapp
 warSrcDir=src/main/webapp
 warSrcDirIsOutput=false

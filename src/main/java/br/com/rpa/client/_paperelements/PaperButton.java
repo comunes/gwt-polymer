@@ -1,13 +1,13 @@
 package br.com.rpa.client._paperelements;
 
-import br.com.rpa.client._coreelements.HasIcon;
-
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Text;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.RootPanel;
+
+import br.com.rpa.client._ironelements.HasIcon;
 
 public class PaperButton extends PaperFocusable implements HasIcon, HasText {
 

@@ -1,13 +1,13 @@
 package br.com.rpa.client._paperelements;
 
-import br.com.rpa.client._coreelements.CoreRange;
-
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.RootPanel;
 
-public class PaperProgress extends CoreRange {
+import br.com.rpa.client._ironelements.IronRangeBehavior;
+
+public class PaperProgress extends IronRangeBehavior {
 
   public static PaperProgress wrap(final Element element) {
     // Assert that the element is attached.

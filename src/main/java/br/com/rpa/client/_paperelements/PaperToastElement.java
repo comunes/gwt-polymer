@@ -20,10 +20,6 @@ public class PaperToastElement extends PaperFocusableElement {
   protected PaperToastElement() {
   }
 
-  public final native void dismiss() /*-{
-		this.dismiss();
-  }-*/;
-
   public final native int getDuration() /*-{
 		return this.duration;
   }-*/;
@@ -34,6 +30,10 @@ public class PaperToastElement extends PaperFocusableElement {
 
   public final native String getText() /*-{
 		return this.text;
+  }-*/;
+
+  public final native void hide() /*-{
+		this.hide();
   }-*/;
 
   public final native boolean isAutoCloseDisabled() /*-{

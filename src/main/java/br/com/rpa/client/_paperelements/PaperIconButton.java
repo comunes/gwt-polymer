@@ -47,4 +47,10 @@ public class PaperIconButton extends PaperButton {
     getPaperElement().setFill(status);
   }
 
+  @Override
+  public void setText(final String text) {
+    // This icons has no text inside
+    // super.setText(text);
+  }
+
 }

@@ -1,22 +1,22 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.TagName;
 
-@TagName(CoreIconElement.TAG)
-public class CoreIconElement extends Element {
-  public static final String TAG = "core-icon";
+@TagName(IronIconElement.TAG)
+public class IronIconElement extends Element {
+  public static final String TAG = "iron-icon";
 
   /**
    * Assert that the given {@link Element} is compatible with this class and
    * automatically typecast it.
    */
-  public static CoreIconElement as(final Element elem) {
+  public static IronIconElement as(final Element elem) {
     assert elem.getTagName().equalsIgnoreCase(TAG);
-    return (CoreIconElement) elem;
+    return (IronIconElement) elem;
   }
 
-  protected CoreIconElement() {
+  protected IronIconElement() {
   }
 
   public final native String getAlt() /*-{

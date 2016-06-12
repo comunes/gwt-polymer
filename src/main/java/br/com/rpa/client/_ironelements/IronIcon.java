@@ -1,4 +1,4 @@
-package br.com.rpa.client._coreelements;
+package br.com.rpa.client._ironelements;
 
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
@@ -6,15 +6,15 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-public class CoreIcon extends Widget implements HasIcon {
+public class IronIcon extends Widget implements HasIcon {
 
   public static final String STYLE = "";
 
-  public static CoreIcon wrap(final Element element) {
+  public static IronIcon wrap(final Element element) {
     // Assert that the element is attached.
     assert Document.get().getBody().isOrHasChild(element);
 
-    final CoreIcon widget = new CoreIcon(element, STYLE);
+    final IronIcon widget = new IronIcon(element, STYLE);
 
     // Mark it attached and remember it for cleanup.
     widget.onAttach();
@@ -23,19 +23,19 @@ public class CoreIcon extends Widget implements HasIcon {
     return widget;
   }
 
-  public static CoreIcon wrap(final String id) {
+  public static IronIcon wrap(final String id) {
     return wrap(DOM.getElementById(id));
   }
 
-  public CoreIcon() {
-    this(Document.get().createElement(CoreIconElement.TAG), STYLE);
+  public IronIcon() {
+    this(Document.get().createElement(IronIconElement.TAG), STYLE);
   }
 
-  protected CoreIcon(final Element elem) {
+  protected IronIcon(final Element elem) {
     setElement(elem);
   }
 
-  public CoreIcon(final Element element, String styleName) {
+  public IronIcon(final Element element, String styleName) {
     this(element);
     if (styleName != null && !styleName.equalsIgnoreCase(STYLE)) {
       styleName = STYLE + " " + styleName;
@@ -49,7 +49,7 @@ public class CoreIcon extends Widget implements HasIcon {
     return getCoreElement().getAlt();
   }
 
-  private CoreIconElement getCoreElement() {
+  private IronIconElement getCoreElement() {
     return getElement().cast();
   }
 
